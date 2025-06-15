@@ -112,7 +112,7 @@
                                                 &lt 3 UNDERSCORE     &lt 1 SPACE        &mt LGUI DEL                                                     &mt RIGHT_SHIFT BACKSPACE  &lt 1 ENTER   &lt 2 ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             label = "CLMK";
         };
 
@@ -125,7 +125,7 @@
                                                                     &trans                               &trans                      &trans                                                                    &trans         &trans             &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         function_layer {
