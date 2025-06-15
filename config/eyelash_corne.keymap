@@ -38,13 +38,15 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-         lt_sk: lt_sk {
+
+        lt_sk: lt_sk {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
-            bindings = <&mo>, <&sk>;  // hold = momentary layer, tap = sticky key
+            bindings = <&mo>, <&sk>;
+  // hold = momentary layer, tap = sticky key
         };
 
         hml: hml {
@@ -96,6 +98,16 @@
             bindings = <&kp TAB>;
             key-positions = <8 9>;
         };
+
+        tog_game {
+            bindings = <&tog 4>;
+            key-positions = <12 11>;
+        };
+
+        tog_nav {
+            bindings = <&tog 3>;
+            key-positions = <2 3 4>;
+        };
     };
 
     keymap {
@@ -103,10 +115,10 @@
 
         default_layer {
             bindings = <
-&tog 3           &kp Q        &kp W             &kp F                &kp P              &kp B                                 &kp UP_ARROW               &kp J                      &kp L         &kp U         &kp Y        &kp COLON        &tog 4
-&kp EQUAL        &hml LALT A  &hml RIGHT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                       &kp LEFT  &kp ENTER       &kp RIGHT  &kp M                      &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr LEFT_ALT O  &kp APOS
-&kp PRINTSCREEN  &kp Z        &kp X             &kp C                &kp D              &kp V         &kp C_MUTE              &kp DOWN_ARROW             &kp K                      &kp H         &kp COMMA     &kp DOT      &kp FSLH         &kp MINUS
-                                                &sl 1                &lt 1 SPACE        &mt LGUI DEL                                                     &mt RIGHT_SHIFT BACKSPACE  &kp RSHFT     &lt 2 ESCAPE
+&kp ESCAPE       &kp Q        &kp W             &kp F                &kp P              &kp B                                 &kp UP_ARROW               &kp J          &kp L                 &kp U          &kp Y        &kp COLON        &kp CAPS
+&kp EQUAL        &hml LALT A  &hml RIGHT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                       &kp LEFT  &kp ENTER       &kp RIGHT  &kp M          &hmr RSHFT N          &hmr RCTRL E   &hmr RALT I  &hmr LEFT_ALT O  &kp APOS
+&kp PRINTSCREEN  &kp Z        &kp X             &kp C                &kp D              &kp V         &kp C_MUTE              &kp DOWN_ARROW             &kp K          &kp H                 &kp COMMA      &kp DOT      &kp FSLH         &kp MINUS
+                                                &sl 1                &lt 1 SPACE        &mt LGUI DEL                                                     &kp BACKSPACE  &lt_sk 1 RIGHT_SHIFT  &lt_sk 2 RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
