@@ -148,7 +148,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   NAV:
-  - {t: CLMK, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -160,7 +160,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - PRINTSCREEN
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -209,7 +209,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: CLMK, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
   - A
   - S
