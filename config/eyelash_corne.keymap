@@ -50,6 +50,20 @@
         tap-ms = <100>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <23 24 25>;
+        };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <8 9>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
