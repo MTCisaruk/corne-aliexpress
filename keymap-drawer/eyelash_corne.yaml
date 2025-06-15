@@ -15,19 +15,19 @@ layers:
   - ':'
   - {t: GAME, h: toggle}
   - {t: '=', s: +}
-  - {t: '$$mdi:apple-keyboard-option$$', h: A}
-  - {t: '$$mdi:apple-keyboard-option$$', h: R}
-  - {t: '$$mdi:apple-keyboard-control$$', h: S}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: T}
+  - '&hm A LALT'
+  - '&hm R RIGHT_ALT'
+  - '&hm S LEFT_CONTROL'
+  - '&hm T LEFT_SHIFT'
   - G
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
   - M
-  - {t: '$$mdi:apple-keyboard-shift$$', h: N}
-  - {t: '$$mdi:apple-keyboard-control$$', h: E}
-  - {t: '$$mdi:apple-keyboard-option$$', h: I}
-  - {t: '$$mdi:apple-keyboard-option$$', h: O}
+  - '&hm N RSHFT'
+  - '&hm E RCTRL'
+  - '&hm I RALT'
+  - '&hm O LEFT_ALT'
   - .
   - PRINTSCREEN
   - Z
@@ -64,19 +64,19 @@ layers:
   - )
   - CLCK
   - $
-  - {t: '!', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: (, h: 'AltGr+$$mdi:apple-keyboard-option$$'}
+  - '&hm LALT EXCLAMATION'
+  - '&hm RA(RIGHT_ALT) LEFT_PARENTHESIS'
   - Ctl+)
-  - {t: _, h: 'Sft+$$mdi:apple-keyboard-control$$'}
+  - '&hm LS(LEFT_CONTROL) UNDERSCORE'
   - '*'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '-', s: _}
-  - {t: '=', h: '$$mdi:apple-keyboard-shift$$', s: +}
-  - {t: '[', h: '$$mdi:apple-keyboard-control$$', s: '{'}
-  - {t: ']', h: '$$mdi:apple-keyboard-option$$', s: '}'}
-  - {t: \, h: '$$mdi:apple-keyboard-option$$', s: '|'}
+  - '&hm RSHIFT EQUAL'
+  - '&hm RCTRL LEFT_BRACKET'
+  - '&hm RIGHT_ALT RIGHT_BRACKET'
+  - '&hm LEFT_ALT BACKSLASH'
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
   - '@'
