@@ -42,20 +42,16 @@
         hmt: hmt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <0>;
-            quick-tap-ms = <0>;
-            require-prior-idle-ms = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
 
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <0>;
-            quick-tap-ms = <0>;
-            require-prior-idle-ms = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <7 8 9 10 11 12 14 15 16 17 22 23 24 25 26 27 35 36 37 38 39 40 44 45 46>;
@@ -66,10 +62,8 @@
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <0>;
-            quick-tap-ms = <0>;
-            require-prior-idle-ms = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 23 24 25 26 28 29 30 31 32 33 41 42 43>;
