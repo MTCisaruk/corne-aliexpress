@@ -68,7 +68,7 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp INS     &kp N1               &kp N2                    &kp N3                     &kp N4              &kp N5                                   &mmv MOVE_UP                     &kp N6         &kp N7         &kp N8        &kp N9        &kp RPAR      &kp BSPC
+&kp INS     &kp N1               &kp N2                    &kp N3                     &kp N4              &kp N5                                   &mmv MOVE_UP                     &kp N6         &kp N7         &kp N8        &kp N9        &kp RPAR      &kp CLCK
 &kp DOLLAR  &kp LA(EXCLAMATION)  &kp RA(LEFT_PARENTHESIS)  &kp LC(RIGHT_PARENTHESIS)  &kp LS(UNDERSCORE)  &kp ASTERISK             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS      &kp RS(EQUAL)  &kp RC(LBKT)  &kp RA(RBKT)  &kp LA(BSLH)  &kp PERCENT
 &trans      &kp AT               &kp GRAVE                 &kp TILDE                  &kp POUND           &kp SEMICOLON  &trans                    &mmv MOVE_DOWN                   &kp AMPERSAND  &kp PLUS       &kp LBRC      &kp RBRC      &kp PIPE      &kp CARET
                                                            &trans                     &trans              &trans                                                                    &trans         &trans         &trans
