@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   CLMK:
-  - {t: NAV, h: toggle}
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - F
@@ -13,7 +13,7 @@ layers:
   - U
   - Y
   - ':'
-  - {t: GAME, h: toggle}
+  - $$mdi:apple-keyboard-caps$$
   - {t: '=', s: +}
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: R, h: '$$mdi:apple-keyboard-option$$'}
@@ -46,9 +46,9 @@ layers:
   - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
   - {t: '$$mdi:backspace-reverse-outline$$', h: LGUI}
-  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:keyboard-esc$$', h: FN}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: SYMBOL}
+  - {t: '$$mdi:apple-keyboard-option$$', h: FN}
   SYMBOL:
   - INS
   - {t: '1', s: '!'}
@@ -96,7 +96,7 @@ layers:
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   FN:
   - F1
@@ -250,3 +250,7 @@ combos:
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [8, 9]
   k: $$mdi:keyboard-tab$$
+- p: [12, 11]
+  k: {t: GAME, h: toggle}
+- p: [2, 3, 4]
+  k: {t: NAV, h: toggle}
