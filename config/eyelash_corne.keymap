@@ -40,12 +40,12 @@
         };
 
         hmt: hmt {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        flavor = "balanced";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <150>;
-        bindings = <&kp>, <&kp>;
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&kp>, <&kp>;
         };
 
         hml: hml {
@@ -55,10 +55,12 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 35 36 37 38 39 40 44 45 46>; 
+
+            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 35 36 37 38 39 40 44 45 46>;
         };
-        
+
         // Mano derecha
+
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -66,6 +68,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 41 42 43>;
         };
     };
@@ -103,10 +106,10 @@
 
         default_layer {
             bindings = <
-&tog 3           &kp Q        &kp W             &kp F                &kp P              &kp B                                &kp UP_ARROW               &kp J        &kp L                      &kp U         &kp Y        &kp COLON        &tog 4
-&kp EQUAL        &hml LALT A  &hml RIGHT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                      &kp LEFT  &kp ENTER       &kp RIGHT  &kp M        &hmr RSHFT N               &hmr RCTRL E  &hmr RALT I  &hmr LEFT_ALT O  &kp APOS
-&kp PRINTSCREEN  &kp Z        &kp X             &kp C                &kp D              &kp V        &kp C_MUTE              &kp DOWN_ARROW             &kp K        &kp H                      &kp COMMA     &kp DOT      &kp FSLH         &kp MINUS
-                                                &lt 3 UNDERSCORE     &lt 1 SPACE        &mt LGUI DEL                         &mt RIGHT_SHIFT BACKSPACE &lt 1 ENTER  &lt 2 ESCAPE
+&tog 3           &kp Q        &kp W             &kp F                &kp P              &kp B                                 &kp UP_ARROW               &kp J                      &kp L         &kp U         &kp Y        &kp COLON        &tog 4
+&kp EQUAL        &hml LALT A  &hml RIGHT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                       &kp LEFT  &kp ENTER       &kp RIGHT  &kp M                      &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr LEFT_ALT O  &kp APOS
+&kp PRINTSCREEN  &kp Z        &kp X             &kp C                &kp D              &kp V         &kp C_MUTE              &kp DOWN_ARROW             &kp K                      &kp H         &kp COMMA     &kp DOT      &kp FSLH         &kp MINUS
+                                                &lt 3 UNDERSCORE     &lt 1 SPACE        &mt LGUI DEL                                                     &mt RIGHT_SHIFT BACKSPACE  &lt 1 ENTER   &lt 2 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
@@ -140,7 +143,7 @@
         navigation_layer {
             display-name = "NAV";
             bindings = <
-&tog 0  &trans          &kp UP_ARROW    &trans           &trans     &trans                              &mmv MOVE_UP                     &trans  &kp N7        &kp N8        &kp N9        &kp PRINTSCREEN  &trans
+&trans  &trans          &kp UP_ARROW    &trans           &trans     &trans                              &mmv MOVE_UP                     &trans  &kp N7        &kp N8        &kp N9        &kp PRINTSCREEN  &none
 &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0           &trans
 &trans  &trans          &trans          &trans           &trans     &trans     &none                    &mmv MOVE_DOWN                   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans           &trans
                                         &mkp MCLK        &mkp LCLK  &mkp RCLK                                                            &trans  &trans        &trans
@@ -151,9 +154,9 @@
 
         game_layer {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E      &kp R      &kp T                                  &mmv MOVE_UP                     &trans  &trans          &kp UP_ARROW  &trans     &trans  &tog 0
-&kp LSHFT  &kp A  &kp S  &kp D      &kp F      &kp G                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans  &trans
-&kp LCTRL  &kp Z  &kp X  &kp C      &kp V      &kp B        &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans        &trans     &trans  &trans
+&kp TAB    &kp Q  &kp W  &kp E      &kp R        &kp T                                &mmv MOVE_UP                     &trans  &trans          &kp UP_ARROW  &trans     &trans  &trans
+&kp LSHFT  &kp A  &kp S  &kp D      &kp F        &kp G                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans  &trans
+&kp LCTRL  &kp Z  &kp X  &kp C      &kp V        &kp B      &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans        &trans     &trans  &trans
                          &kp LCTRL  &lt 3 SPACE  &kp LSHFT                                                             &trans  &trans          &trans
             >;
 
