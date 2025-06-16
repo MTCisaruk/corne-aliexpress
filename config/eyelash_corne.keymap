@@ -117,36 +117,6 @@
         };
     };
 
-    macros {
-        copy: copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_SHIFT &kp C>;
-            label = "COPY";
-        };
-
-        paste: paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_SHIFT &kp V>;
-            label = "PASTE";
-        };
-
-        undo: undo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp Z>;
-            label = "UNDO";
-        };
-
-        redo: redo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_SHIFT &kp Z>;
-            label = "REDO";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -189,10 +159,10 @@
         navigation_layer {
             display-name = "NAV";
             bindings = <
-&msc SCRL_UP    &kp LEFT_SHIFT  &kp BACKSPACE  &kp UP_ARROW    &kp F11          &copy                               &mmv MOVE_UP                     &trans  &kp N7        &kp N8        &kp N9        &kp PRINTSCREEN  &none
-&msc SCRL_DOWN  &kp LCTRL       &kp LEFT       &kp DOWN        &kp RIGHT        &paste              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0           &trans
-&trans          &undo           &redo          &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans     &none                    &mmv MOVE_DOWN                   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans           &trans
-                                               &mkp MCLK       &mkp LCLK        &mkp RCLK                                                            &trans  &trans        &trans
+&trans          &kp LEFT_SHIFT  &kp BACKSPACE  &kp UP_ARROW  &kp F11    &kp C                               &mmv MOVE_UP                     &trans  &kp N7                     &kp N8         &kp N9                  &kp PRINTSCREEN  &none
+&kp LEFT_SHIFT  &kp LCTRL       &kp LEFT       &kp DOWN      &kp RIGHT  &kp V               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &hmr RIGHT_SHIFT NUMBER_4  &hmr RCTRL N5  &hmr LEFT_GUI NUMBER_6  &hmr LALT N0     &trans
+&kp LCTRL       &trans          &trans         &trans        &trans     &trans     &none                    &mmv MOVE_DOWN                   &trans  &kp NUMBER_1               &kp NUMBER_2   &kp NUMBER_3            &trans           &trans
+                                               &mkp MCLK     &mkp LCLK  &mkp RCLK                                                            &trans  &trans                     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
