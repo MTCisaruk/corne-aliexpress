@@ -117,15 +117,45 @@
         };
     };
 
+    macros {
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_SHIFT &kp C>;
+            label = "COPY";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_SHIFT &kp V>;
+            label = "PASTE";
+        };
+
+        undo: undo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp Z>;
+            label = "UNDO";
+        };
+
+        redo: redo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_SHIFT &kp Z>;
+            label = "REDO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp ESCAPE       &kp Q        &kp W             &kp F                &kp P              &kp B                                 &kp UP_ARROW               &kp J          &kp L                 &kp U          &kp Y        &kp COLON        &kp CAPS
-&kp EQUAL        &hml LALT A  &hml RIGHT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                       &kp LEFT  &kp ENTER       &kp RIGHT  &kp M          &hmr RSHFT N          &hmr RCTRL E   &hmr RALT I  &hmr LEFT_ALT O  &kp APOS
-&kp PRINTSCREEN  &kp Z        &kp X             &kp C                &kp D              &kp V         &kp C_MUTE              &kp DOWN_ARROW             &kp K          &kp H                 &kp COMMA      &kp DOT      &kp FSLH         &kp MINUS
-                                                &sl 1                &lt 1 SPACE        &mt LGUI DEL                                                     &kp BACKSPACE  &lt_sk 1 RIGHT_SHIFT  &lt_sk 2 RALT
+&kp ESCAPE       &kp Q        &kp W        &kp F                &kp P              &kp B                               &kp UP_ARROW               &kp J          &kp L                 &kp U          &kp Y        &kp COLON        &kp CAPS
+&kp EQUAL        &hml LALT A  &hml LGUI R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                     &kp LEFT  &kp ENTER       &kp RIGHT  &kp M          &hmr RSHFT N          &hmr RCTRL E   &hmr LGUI I  &hmr LEFT_ALT O  &kp APOS
+&kp PRINTSCREEN  &kp Z        &kp X        &kp C                &kp D              &kp V       &kp C_MUTE              &kp DOWN_ARROW             &kp K          &kp H                 &kp COMMA      &kp DOT      &kp FSLH         &kp MINUS
+                                           &sl 1                &lt 1 SPACE        &kp DELETE                                                     &kp BACKSPACE  &lt_sk 1 RIGHT_SHIFT  &lt_sk 2 RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -135,21 +165,21 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp INS     &kp N1                 &kp N2                           &kp N3                               &kp N4                      &kp N5                                   &mmv MOVE_UP                     &kp N6         &kp N7             &kp N8                   &kp N9                        &kp RPAR                 &kp CLCK
-&kp DOLLAR  &hml LALT EXCLAMATION  &hml RIGHT_ALT LEFT_PARENTHESIS  &hml LEFT_CONTROL RIGHT_PARENTHESIS  &hml LEFT_SHIFT UNDERSCORE  &kp ASTERISK             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS      &hmr RSHIFT EQUAL  &hmr RCTRL LEFT_BRACKET  &hmr RIGHT_ALT RIGHT_BRACKET  &hmr LEFT_ALT BACKSLASH  &kp PERCENT
-&trans      &kp AT                 &kp GRAVE                        &kp TILDE                            &kp POUND                   &kp SEMICOLON  &trans                    &mmv MOVE_DOWN                   &kp AMPERSAND  &kp PLUS           &kp LBRC                 &kp RBRC                      &kp PIPE                 &kp CARET
-                                                                    &trans                               &trans                      &trans                                                                    &trans         &trans             &trans
+&kp INS       &kp N1            &kp N2                      &kp N3                               &kp N4                      &kp N5                                   &mmv MOVE_UP                     &kp N6         &kp N7            &kp N8                   &kp N9                   &kp N0                   &kp CARET
+&kp LEFT_GUI  &hml LALT DOLLAR  &hml LGUI LEFT_PARENTHESIS  &hml LEFT_CONTROL RIGHT_PARENTHESIS  &hml LEFT_SHIFT UNDERSCORE  &kp ASTERISK             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS      &hmr RSHIFT PLUS  &hmr RCTRL LEFT_BRACKET  &hmr LGUI RIGHT_BRACKET  &hmr LEFT_ALT BACKSLASH  &kp PERCENT
+&trans        &kp AT            &kp GRAVE                   &kp SEMI                             &kp POUND                   &kp SEMICOLON  &trans                    &mmv MOVE_DOWN                   &kp AMPERSAND  &kp EXCLAMATION   &kp LBRC                 &kp RBRC                 &kp PIPE                 &kp CARET
+                                                            &trans                               &trans                      &trans                                                                    &trans         &trans            &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         function_layer {
             display-name = "FN";
             bindings = <
-&kp F1          &kp F2        &kp F3        &kp F4            &kp F5        &kp F6                                         &mmv MOVE_UP                     &kp F7           &kp F8           &kp F9                          &kp F10                           &kp F11   &kp F12
-&bt BT_CLR      &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &rgb_ug RGB_ON   &rgb_ug RGB_OFF  &rgb_ug RGB_COLOR_HSB(0,0,100)  &rgb_ug RGB_COLOR_HSB(52,100,86)  &kp HOME  &kp PG_UP
-&bt BT_CLR_ALL  &sys_reset    &bootloader   &trans            &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI                 &rgb_ug RGB_BRD                   &kp END   &kp PG_DN
+&kp F1          &kp F2        &kp F3        &kp F4            &kp F5        &kp F6                                         &mmv MOVE_UP                     &kp F7           &kp F8           &kp F9                          &kp F10                          &kp F11   &kp F12
+&bt BT_CLR      &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &rgb_ug RGB_TOG  &none            &rgb_ug RGB_COLOR_HSB(0,0,100)  &rgb_ug RGB_COLOR_HSB(52,15,67)  &kp HOME  &kp PG_UP
+&bt BT_CLR_ALL  &sys_reset    &bootloader   &trans            &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI                 &rgb_ug RGB_BRD                  &kp END   &kp PG_DN
                                             &kp LEFT_CONTROL  &kp LSHIFT    &kp LGUI                                                                        &trans           &trans           &trans
             >;
 
@@ -159,13 +189,13 @@
         navigation_layer {
             display-name = "NAV";
             bindings = <
-&trans  &trans          &kp UP_ARROW    &trans           &trans     &trans                              &mmv MOVE_UP                     &trans  &kp N7        &kp N8        &kp N9        &kp PRINTSCREEN  &none
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0           &trans
-&trans  &trans          &trans          &trans           &trans     &trans     &none                    &mmv MOVE_DOWN                   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans           &trans
-                                        &mkp MCLK        &mkp LCLK  &mkp RCLK                                                            &trans  &trans        &trans
+&msc SCRL_UP    &kp LEFT_SHIFT  &kp BACKSPACE  &kp UP_ARROW    &kp F11          &copy                               &mmv MOVE_UP                     &trans  &kp N7        &kp N8        &kp N9        &kp PRINTSCREEN  &none
+&msc SCRL_DOWN  &kp LCTRL       &kp LEFT       &kp DOWN        &kp RIGHT        &paste              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0           &trans
+&trans          &undo           &redo          &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans     &none                    &mmv MOVE_DOWN                   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans           &trans
+                                               &mkp MCLK       &mkp LCLK        &mkp RCLK                                                            &trans  &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         game_layer {
