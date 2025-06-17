@@ -14,7 +14,7 @@ layers:
   - Y
   - ':'
   - $$mdi:apple-keyboard-caps$$
-  - {t: '=', s: +}
+  - NAV
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: R, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
@@ -29,7 +29,7 @@ layers:
   - {t: I, h: LGUI}
   - {t: O, h: '$$mdi:apple-keyboard-option$$'}
   - .
-  - PRINTSCREEN
+  - {t: '=', s: +}
   - Z
   - X
   - C
@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '-', s: _}
-  - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
   - {t: '$$mdi:apple-keyboard-shift$$', h: SYMBOL}
   - {t: '$$mdi:apple-keyboard-option$$', h: FN}
+  - '&it 1 ENTER'
+  - {t: '$$mdi:backspace$$', type: backspace}
   SYMBOL:
   - INS
   - {t: '1', s: '!'}
@@ -92,11 +92,11 @@ layers:
   - '}'
   - '|'
   - ^
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   FN:
   - F1
@@ -144,9 +144,9 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - LGUI
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   NAV:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
@@ -161,7 +161,7 @@ layers:
   - {t: '9', s: (}
   - PRINTSCREEN
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:apple-keyboard-shift$$', type: held}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
