@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
-  - {t: SYMBOL, h: '&lt 1'}
+  - {t: SYMBOL, h: SYMBOL}
   SYMBOL:
   - INS
   - {t: '1', s: '!'}
