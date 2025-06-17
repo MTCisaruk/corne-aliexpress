@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   CLMK:
-  - $$mdi:keyboard-esc$$
+  - _
   - Q
   - W
   - F
@@ -13,8 +13,8 @@ layers:
   - U
   - Y
   - ':'
-  - $$mdi:apple-keyboard-caps$$
-  - NAV
+  - {t: '-', s: _}
+  - {t: '=', s: +}
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: R, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
@@ -29,7 +29,7 @@ layers:
   - {t: I, h: LGUI}
   - {t: O, h: '$$mdi:apple-keyboard-option$$'}
   - .
-  - {t: '=', s: +}
+  - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
   - Z
   - X
   - C
@@ -42,12 +42,12 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '-', s: _}
+  - $$mdi:apple-keyboard-caps$$
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: SYMBOL}
-  - {t: '$$mdi:apple-keyboard-option$$', h: FN}
-  - '&it 1 ENTER'
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
   - {t: '$$mdi:backspace$$', type: backspace}
   SYMBOL:
   - INS
@@ -78,7 +78,7 @@ layers:
   - {t: ']', h: LGUI, s: '}'}
   - {t: \, h: '$$mdi:apple-keyboard-option$$', s: '|'}
   - '%'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - '@'
   - {t: '`', s: '~'}
   - {t: ;, s: ':'}
@@ -93,10 +93,10 @@ layers:
   - '|'
   - ^
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   FN:
   - F1
@@ -144,7 +144,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - LGUI
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   NAV:
@@ -161,7 +161,7 @@ layers:
   - {t: '9', s: (}
   - PRINTSCREEN
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:apple-keyboard-shift$$', type: held}
+  - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -246,11 +246,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [23, 24, 25]
-  k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [8, 9]
   k: $$mdi:keyboard-tab$$
 - p: [12, 11]
   k: {t: GAME, h: toggle}
 - p: [2, 3, 4]
   k: {t: NAV, h: toggle}
+- p: [3, 4]
+  k: $$mdi:keyboard-tab$$
+- p: [1, 2, 3]
+  k: {t: FN, h: toggle}
