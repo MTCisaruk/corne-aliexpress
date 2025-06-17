@@ -125,9 +125,9 @@
         default_layer {
             bindings = <
 &kp ESCAPE       &kp Q        &kp W        &kp F                &kp P              &kp B                               &kp UP_ARROW               &kp J          &kp L                 &kp U          &kp Y        &kp COLON        &kp CAPS
-&kp EQUAL        &hml LALT A  &hml LGUI R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                     &kp LEFT  &kp ENTER       &kp RIGHT  &kp M          &hmr RSHFT N          &hmr RCTRL E   &hmr LGUI I  &hmr LEFT_ALT O  &kp APOS
-&kp PRINTSCREEN  &kp Z        &kp X        &kp C                &kp D              &kp V       &kp C_MUTE              &kp DOWN_ARROW             &kp K          &kp H                 &kp COMMA      &kp DOT      &kp FSLH         &kp MINUS
-                                           &sl 1                &lt 1 SPACE        &kp DELETE                                                     &kp BACKSPACE  &lt_sk 1 RIGHT_SHIFT  &lt_sk 2 RALT
+&mo 3            &hml LALT A  &hml LGUI R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                     &kp LEFT  &kp ENTER       &kp RIGHT  &kp M          &hmr RSHFT N          &hmr RCTRL E   &hmr LGUI I  &hmr LEFT_ALT O  &kp APOS
+&kp EQUAL        &kp Z        &kp X        &kp C                &kp D              &kp V       &kp C_MUTE              &kp DOWN_ARROW             &kp K          &kp H                 &kp COMMA      &kp DOT      &kp FSLH         &kp MINUS
+                                        &kp DELETE           &lt 1 SPACE        &lt_sk 1 RIGHT_SHIFT                                           &lt_sk 2 RALT  &it 1 ENTER           &kp BACKSPACE    
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
