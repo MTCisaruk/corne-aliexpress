@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   CLMK:
-  - _
+  - $$mdi:backspace-reverse-outline$$
   - Q
   - W
   - F
@@ -13,7 +13,7 @@ layers:
   - U
   - Y
   - ':'
-  - {t: '-', s: _}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '=', s: +}
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: R, h: LGUI}
@@ -29,7 +29,7 @@ layers:
   - {t: I, h: LGUI}
   - {t: O, h: '$$mdi:apple-keyboard-option$$'}
   - .
-  - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
+  - _
   - Z
   - X
   - C
@@ -42,13 +42,13 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-caps$$
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '-', s: _}
+  - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: SYMBOL, h: '&lt 1'}
   SYMBOL:
   - INS
   - {t: '1', s: '!'}
@@ -78,7 +78,7 @@ layers:
   - {t: ']', h: LGUI, s: '}'}
   - {t: \, h: '$$mdi:apple-keyboard-option$$', s: '|'}
   - '%'
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - '@'
   - {t: '`', s: '~'}
   - {t: ;, s: ':'}
@@ -93,11 +93,11 @@ layers:
   - '|'
   - ^
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   FN:
   - F1
   - F2
