@@ -95,7 +95,7 @@
         l_mo_sk: l_mo_sk {
             compatible = "zmk,behavior-hold-tap";
             label = "Momentary and sticky layer";
-            bindings = <&lt>, <&sl>;
+            bindings = <&mo>, <&sl>;
 
             #binding-cells = <2>;
             tapping-term-ms = <2000>;
