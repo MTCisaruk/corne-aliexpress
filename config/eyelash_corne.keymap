@@ -126,13 +126,8 @@
         };
 
         tog_game {
-            bindings = <&tog 4>;
-            key-positions = <12 11>;
-        };
-
-        tog_nav {
             bindings = <&tog 3>;
-            key-positions = <2 3 4>;
+            key-positions = <12 11 10>;
         };
 
         Tab1 {
@@ -164,10 +159,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp INS       &kp N1            &kp N2                      &kp N3                               &kp N4                      &kp N5                                   &mmv MOVE_UP                     &kp N6         &kp N7            &kp N8                   &kp N9                   &kp N0                   &kp CARET
-&kp LEFT_GUI  &hml LALT DOLLAR  &hml LGUI LEFT_PARENTHESIS  &hml LEFT_CONTROL RIGHT_PARENTHESIS  &hml LEFT_SHIFT UNDERSCORE  &kp ASTERISK             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS      &hmr RSHIFT PLUS  &hmr RCTRL LEFT_BRACKET  &hmr LGUI RIGHT_BRACKET  &hmr LEFT_ALT BACKSLASH  &kp PERCENT
-&trans        &kp AT            &kp GRAVE                   &kp SEMI                             &kp POUND                   &kp SEMICOLON  &trans                    &mmv MOVE_DOWN                   &kp AMPERSAND  &kp EXCLAMATION   &kp LBRC                 &kp RBRC                 &kp PIPE                 &kp CARET
-                                                            &trans                               &trans                      &trans                                                                    &trans         &trans            &trans
+&kp AMPERSAND  &kp N1           &kp N2                 &kp N3                              &kp N4                             &kp N5                                   &mmv MOVE_UP                     &kp N6         &kp N7                    &kp N8                    &kp N9               &kp N0              &kp CARET
+&kp GRAVE      &hml LALT TILDE  &hml LGUI EXCLAMATION  &hml LEFT_CONTROL LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp POUND                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp ASTRK      &hmr RSHIFT LEFT_BRACKET  &hmr RCTRL RIGHT_BRACKET  &hmr LGUI BACKSLASH  &hmr LEFT_ALT PIPE  &kp PERCENT
+&kp INS        &kp SLASH        &kp QUESTION           &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp SEMICOLON  &trans                    &mmv MOVE_DOWN                   &kp AMPERSAND  &kp EXCLAMATION           &kp LBRC                  &kp RBRC             &kp PIPE            &kp DOLLAR
+                                                       &trans                              &trans                             &trans                                                                    &trans         &trans                    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -185,28 +180,34 @@
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
-        navigation_layer {
-            display-name = "NAV";
-            bindings = <
-&trans          &kp LEFT_SHIFT  &kp BACKSPACE  &kp UP_ARROW  &kp F11    &kp C                               &mmv MOVE_UP                     &trans  &kp N7                     &kp N8         &kp N9                  &kp PRINTSCREEN  &none
-&kp LEFT_SHIFT  &kp LCTRL       &kp LEFT       &kp DOWN      &kp RIGHT  &kp V               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &hmr RIGHT_SHIFT NUMBER_4  &hmr RCTRL N5  &hmr LEFT_GUI NUMBER_6  &hmr LALT N0     &trans
-&kp LCTRL       &trans          &trans         &trans        &trans     &trans     &none                    &mmv MOVE_DOWN                   &trans  &kp NUMBER_1               &kp NUMBER_2   &kp NUMBER_3            &trans           &trans
-                                               &mkp MCLK     &mkp LCLK  &mkp RCLK                                                            &trans  &trans                     &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
         game_layer {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E      &kp R        &kp T                                &mmv MOVE_UP                     &trans  &trans          &kp UP_ARROW  &trans     &trans  &trans
-&kp LSHFT  &kp A  &kp S  &kp D      &kp F        &kp G                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans  &trans
-&kp LCTRL  &kp Z  &kp X  &kp C      &kp V        &kp B      &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans        &trans     &trans  &trans
-                         &kp LCTRL  &lt 3 SPACE  &kp LSHFT                                                             &trans  &trans          &trans
+&kp TAB    &kp Q  &kp W  &kp E      &kp R      &kp T                                &mmv MOVE_UP                     &trans  &trans          &kp UP_ARROW  &trans     &trans  &trans
+&kp LSHFT  &kp A  &kp S  &kp D      &kp F      &kp G                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans  &trans
+&kp LCTRL  &kp Z  &kp X  &kp C      &kp V      &kp B      &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans        &trans     &trans  &trans
+                         &kp LCTRL  &kp SPACE  &kp LSHFT                                                             &trans  &trans          &trans
             >;
 
             label = "GAME";
             sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
+        };
+
+        navigation_layer {
+            bindings = <
+&trans  &trans  &mkp MCLK  &kp UP_ARROW    &mkp RCLK  &trans                            &mmv MOVE_UP                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans          &trans     &trans  &trans                    &mmv MOVE_DOWN                   &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans          &trans     &trans                                                             &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
         };
     };
 };
