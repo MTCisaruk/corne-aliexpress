@@ -155,10 +155,10 @@
 
         default_layer {
             bindings = <
-&kp DELETE  &kp Q        &kp W        &kp F                &kp P              &kp B                                     &kp UP_ARROW               &kp J                         &kp L         &kp U         &kp Y        &kp COLON        &kp BACKSPACE
-&kp EQUAL   &hml LALT A  &hml LGUI R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                           &kp LEFT  &kp ENTER       &kp RIGHT  &kp M                         &hmr RSHFT N  &hmr RCTRL E  &hmr LGUI I  &hmr LEFT_ALT O  &kp APOS
-&kp UNDER   &kp Z        &kp X        &kp C                &kp D              &kp V             &kp C_MUTE              &kp DOWN_ARROW             &kp K                         &kp H         &kp COMMA     &kp DOT      &kp FSLH         &kp MINUS
-                                      &kp ESCAPE           &lt 1 SPACE        &shift RALT RALT                                                     &shift LEFT_SHIFT LEFT_SHIFT  &lt 1 ENTER   &l_mo_sk 1 1
+&kp DELETE  &kp Q        &kp W        &kp F                &kp P              &kp B                                 &kp UP_ARROW               &kp J                         &kp L         &kp U         &kp Y        &kp COLON        &kp BACKSPACE
+&kp EQUAL   &hml LALT A  &hml LGUI R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                       &kp LEFT  &kp ENTER       &kp RIGHT  &kp M                         &hmr RSHFT N  &hmr RCTRL E  &hmr LGUI I  &hmr LEFT_ALT O  &kp APOS
+&kp UNDER   &kp Z        &kp X        &kp C                &kp D              &kp V         &kp C_MUTE              &kp DOWN_ARROW             &kp K                         &kp H         &kp COMMA     &kp DOT      &kp FSLH         &kp MINUS
+                                      &l_mo_sk 5 5         &lt 4 SPACE        &l_mo_sk 1 1                                                     &shift LEFT_SHIFT LEFT_SHIFT  &lt 2 ENTER   &lt 6 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -168,13 +168,13 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp AMPERSAND  &kp N1           &kp N2                 &kp N3                              &kp N4                             &kp N5                                   &mmv MOVE_UP                     &kp N6         &kp N7                    &kp N8                    &kp N9               &kp N0              &kp CARET
-&kp GRAVE      &hml LALT TILDE  &hml LGUI EXCLAMATION  &hml LEFT_CONTROL LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp POUND                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp ASTRK      &hmr RSHIFT LEFT_BRACKET  &hmr RCTRL RIGHT_BRACKET  &hmr LGUI BACKSLASH  &hmr LEFT_ALT PIPE  &kp PERCENT
-&kp INS        &kp AMPERSAND    &kp AT                 &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp SEMICOLON  &trans                    &mmv MOVE_DOWN                   &kp AMPERSAND  &kp PLUS                  &kp LBRC                  &kp RBRC             &kp CARET           &kp DOLLAR
-                                                       &trans                              &trans                             &trans                                                                    &trans         &trans                    &trans
+&kp AMPERSAND  &kp N1           &kp N2                 &kp N3                              &kp N4                             &kp N5                                          &mmv MOVE_UP                     &kp N6         &kp N7                    &kp N8                    &kp N9               &kp N0              &kp CARET
+&kp GRAVE      &hml LALT TILDE  &hml LGUI EXCLAMATION  &hml LEFT_CONTROL LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp POUND                       &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp ASTRK      &hmr RSHIFT LEFT_BRACKET  &hmr RCTRL RIGHT_BRACKET  &hmr LGUI BACKSLASH  &hmr LEFT_ALT PIPE  &kp PERCENT
+&kp INS        &kp AMPERSAND    &kp AT                 &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp SEMICOLON  &kp C_BRI_MIN                    &mmv MOVE_DOWN                   &kp AMPERSAND  &kp PLUS                  &kp LBRC                  &kp RBRC             &kp CARET           &kp DOLLAR
+                                                       &trans                              &trans                             &trans                                                                           &trans         &trans                    &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
         function_layer {
@@ -208,9 +208,11 @@
 &trans  &trans  &trans     &trans          &trans     &trans  &trans                    &mmv MOVE_DOWN                   &trans  &trans  &trans  &trans  &trans  &trans
                            &trans          &trans     &trans                                                             &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_5 {
+        special_layer {
             bindings = <
 &trans  &kp RA(COMMA)  &kp LS(RA(NUMBER_1))  &kp P   &kp LS(RA(SLASH))  &trans                    &trans          &trans  &kp LS(QUESTION)  &kp U   &kp EXCL  &degree  &trans
 &trans  &kp A          &kp Q                 &kp S   &kp Y              &trans            &trans  &trans  &trans  &trans  &kp N             &kp E   &kp I     &kp O    &trans
@@ -219,13 +221,15 @@
             >;
         };
 
-        layer_6 {
+        numpad {
             bindings = <
-&trans  &kp COMMA  &kp N7  &kp N8  &kp N9  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N0     &kp N4  &kp N5  &kp N6  &kp N0            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp DOT    &kp N1  &kp N2  &kp N3  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans                                    &trans  &trans  &trans
+&trans  &kp COMMA  &kp N7  &kp N8  &kp N9  &trans                           &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N0     &kp N4  &kp N5  &kp N6  &kp N0                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp DOT    &kp N1  &kp N2  &kp N3  &trans  &kp C_BRI_MAX            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans                                           &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
     };
 };
