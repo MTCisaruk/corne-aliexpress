@@ -139,6 +139,11 @@
             bindings = <&tog 2>;
             key-positions = <1 2 3>;
         };
+
+        Capslock {
+            bindings = <&kp CAPS>;
+            key-positions = <23 24 25>;
+        };
     };
 
     macros {
@@ -210,15 +215,18 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            label = "NAV";
         };
 
         special_layer {
             bindings = <
-&trans  &kp RA(COMMA)  &kp LS(RA(NUMBER_1))  &kp P   &kp LS(RA(SLASH))  &trans                    &trans          &trans  &kp LS(QUESTION)  &kp U   &kp EXCL  &degree  &trans
-&trans  &kp A          &kp Q                 &kp S   &kp Y              &trans            &trans  &trans  &trans  &trans  &kp N             &kp E   &kp I     &kp O    &trans
-&trans  &trans         &trans                &trans  &trans             &trans  &trans            &trans          &trans  &trans            &trans  &trans    &trans   &trans
-                                             &trans  &trans             &trans                                    &trans  &trans            &trans
+&trans  &kp RA(COMMA)  &kp LS(RA(NUMBER_1))  &kp RA(P)  &kp LS(RA(SLASH))  &trans                    &trans          &trans  &kp LS(QUESTION)  &kp RA(U)  &kp EXCL   &degree    &trans
+&trans  &kp RA(A)      &kp RA(Q)             &kp RA(S)  &kp RA(Y)          &trans            &trans  &trans  &trans  &trans  &kp RA(N)         &kp RA(E)  &kp RA(I)  &kp RA(O)  &trans
+&trans  &trans         &trans                &trans     &trans             &trans  &trans            &trans          &trans  &trans            &trans     &trans     &trans     &trans
+                                             &trans     &trans             &trans                                    &trans  &trans            &trans
             >;
+
+            label = "AltGr";
         };
 
         numpad {
@@ -230,6 +238,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
+            label = "NPAD";
         };
     };
 };
