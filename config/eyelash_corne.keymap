@@ -173,10 +173,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp AMPERSAND  &kp N1           &kp N2                 &kp N3                              &kp N4                             &kp N5                                          &mmv MOVE_UP                     &kp N6         &kp N7                    &kp N8                    &kp N9               &kp N0              &kp CARET
-&kp GRAVE      &hml LALT TILDE  &hml LGUI EXCLAMATION  &hml LEFT_CONTROL LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp POUND                       &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp ASTRK      &hmr RSHIFT LEFT_BRACKET  &hmr RCTRL RIGHT_BRACKET  &hmr LGUI BACKSLASH  &hmr LEFT_ALT PIPE  &kp PERCENT
-&kp INS        &kp AMPERSAND    &kp AT                 &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp SEMICOLON  &kp C_BRI_MIN                    &mmv MOVE_DOWN                   &kp AMPERSAND  &kp PLUS                  &kp LBRC                  &kp RBRC             &kp CARET           &kp DOLLAR
-                                                       &trans                              &trans                             &trans                                                                           &trans         &trans                    &trans
+&kp DEL    &kp N1           &kp N2                 &kp N3                              &kp N4                             &kp N5                                          &mmv MOVE_UP                     &kp N6         &kp N7                    &kp N8                    &kp N9               &kp N0                    &kp BACKSPACE
+&kp GRAVE  &hml LALT TILDE  &hml LGUI EXCLAMATION  &hml LEFT_CONTROL LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp POUND                       &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp ASTRK      &hmr RSHIFT LEFT_BRACKET  &hmr RCTRL RIGHT_BRACKET  &hmr LGUI BACKSLASH  &hmr LEFT_ALT PIPE        &kp PERCENT
+&kp INS    &kp AMPERSAND    &kp AT                 &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp SEMICOLON  &kp C_BRI_MIN                    &mmv MOVE_DOWN                   &kp AMPERSAND  &kp PLUS                  &kp DOLLAR                &kp CARET            &kp RA(NON_US_BACKSLASH)  &kp RA(SEMICOLON)
+                                                   &trans                              &trans                             &trans                                                                           &trans         &trans                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
