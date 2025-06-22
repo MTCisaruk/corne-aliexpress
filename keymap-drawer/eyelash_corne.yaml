@@ -50,7 +50,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: FN}
   - {t: '$$mdi:keyboard-esc$$', h: NPAD}
   SYMBOL:
-  - '&'
+  - $$mdi:backspace-reverse-outline$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -62,7 +62,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - ^
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '`', s: '~'}
   - {t: '~', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '!', h: LGUI}
@@ -88,10 +88,10 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&'
   - +
-  - '{'
-  - '}'
-  - ^
   - $
+  - ^
+  - AltGr+\
+  - {t: AltGr+;, s: 'AltGr+:'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
