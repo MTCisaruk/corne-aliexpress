@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '-', s: _}
-  - {t: special, h: special}
-  - {t: '$$mdi:keyboard-space$$', h: navigation}
+  - {t: AltGr, h: AltGr}
+  - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: SYMBOL, h: SYMBOL}
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: FN}
-  - {t: '$$mdi:keyboard-esc$$', h: numpad}
+  - {t: '$$mdi:keyboard-esc$$', h: NPAD}
   SYMBOL:
   - '&'
   - {t: '1', s: '!'}
@@ -196,7 +196,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  navigation:
+  NAV:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-scroll-wheel$$
@@ -245,34 +245,34 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  special:
+  AltGr:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 'AltGr+,', s: AltGr+<}
   - Sft+AltGr+1
-  - P
+  - AltGr+P
   - {t: Sft+AltGr+/, s: 'Sft+AltGr+?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Sft+?
-  - U
+  - AltGr+U
   - '!'
   - '&degree'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - A
-  - Q
-  - S
-  - Y
+  - AltGr+A
+  - AltGr+Q
+  - AltGr+S
+  - AltGr+Y
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - N
-  - E
-  - I
-  - O
+  - AltGr+N
+  - AltGr+E
+  - AltGr+I
+  - AltGr+O
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -294,7 +294,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  numpad:
+  NPAD:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: ',', s: <}
   - {t: '7', s: '&'}
@@ -352,3 +352,5 @@ combos:
   k: $$mdi:keyboard-tab$$
 - p: [1, 2, 3]
   k: {t: FN, h: toggle}
+- p: [23, 24, 25]
+  k: $$mdi:apple-keyboard-caps$$
