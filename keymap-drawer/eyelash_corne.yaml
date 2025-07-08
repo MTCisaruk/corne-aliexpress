@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   CLMK:
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Q
   - W
   - F
@@ -13,8 +13,8 @@ layers:
   - U
   - Y
   - ':'
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '=', s: +}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: R, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
@@ -28,8 +28,8 @@ layers:
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}
   - {t: I, h: LGUI}
   - {t: O, h: '$$mdi:apple-keyboard-option$$'}
-  - .
-  - _
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Z
   - X
   - C
@@ -42,13 +42,13 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '-', s: _}
-  - {t: AltGr, h: AltGr}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: SYMBOL, h: SYMBOL}
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: FN}
-  - {t: '$$mdi:keyboard-esc$$', h: NPAD}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   SYMBOL:
   - $$mdi:backspace-reverse-outline$$
   - {t: '1', s: '!'}
@@ -288,7 +288,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -342,7 +342,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [12, 11, 10]
   k: {t: GAME, h: toggle}
@@ -350,5 +350,15 @@ combos:
   k: $$mdi:keyboard-tab$$
 - p: [1, 2, 3]
   k: {t: FN, h: toggle}
-- p: [23, 24, 25]
+- p: [47, 46]
   k: $$mdi:apple-keyboard-caps$$
+- p: [25, 24, 23]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+- p: [11, 10]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [23, 24]
+  k: (
+- p: [24, 25]
+  k: )
+- p: [1, 2]
+  k: $$mdi:backspace-reverse-outline$$
