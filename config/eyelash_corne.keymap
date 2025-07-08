@@ -137,7 +137,32 @@
 
         Capslock {
             bindings = <&kp CAPS>;
-            key-positions = <23 24 25>;
+            key-positions = <47 46>;
+        };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <25 24 23>;
+        };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <11 10>;
+        };
+
+        L_Paretheses {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <23 24>;
+        };
+
+        R_Parentheses {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <24 25>;
+        };
+
+        Delete {
+            bindings = <&kp DELETE>;
+            key-positions = <1 2>;
         };
     };
 
@@ -155,10 +180,10 @@
 
         default_layer {
             bindings = <
-&kp DELETE  &kp Q        &kp W        &kp F                &kp P              &kp B                                 &kp UP_ARROW               &kp J                         &kp L         &kp U         &kp Y        &kp COLON        &kp BACKSPACE
-&kp EQUAL   &hml LALT A  &hml LGUI R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                       &kp LEFT  &kp ENTER       &kp RIGHT  &kp M                         &hmr RSHFT N  &hmr RCTRL E  &hmr LGUI I  &hmr LEFT_ALT O  &kp APOS
-&kp UNDER   &kp Z        &kp X        &kp C                &kp D              &kp V         &kp C_MUTE              &kp DOWN_ARROW             &kp K                         &kp H         &kp COMMA     &kp DOT      &kp FSLH         &kp MINUS
-                                      &l_mo_sk 5 5         &lt 4 SPACE        &l_mo_sk 1 1                                                     &shift LEFT_SHIFT LEFT_SHIFT  &lt 2 ENTER   &lt 6 ESCAPE
+&none  &kp Q        &kp W        &kp F                &kp P              &kp B                                 &kp UP_ARROW               &kp J                         &kp L         &kp U         &kp Y        &kp COLON        &none
+&none  &hml LALT A  &hml LGUI R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                       &kp LEFT  &kp ENTER       &kp RIGHT  &kp M                         &hmr RSHFT N  &hmr RCTRL E  &hmr LGUI I  &hmr LEFT_ALT O  &none
+&none  &kp Z        &kp X        &kp C                &kp D              &kp V         &kp C_MUTE              &kp DOWN_ARROW             &kp K                         &kp H         &kp COMMA     &kp DOT      &kp FSLH         &none
+                                 &none                &lt 4 SPACE        &l_mo_sk 1 1                                                     &shift LEFT_SHIFT LEFT_SHIFT  &lt 2 ENTER   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
