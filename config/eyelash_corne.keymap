@@ -120,11 +120,6 @@
     combos {
         compatible = "zmk,combos";
 
-        Tab2 {
-            bindings = <&kp TAB>;
-            key-positions = <8 9>;
-        };
-
         tog_game {
             bindings = <&tog 3>;
             key-positions = <12 11 10>;
