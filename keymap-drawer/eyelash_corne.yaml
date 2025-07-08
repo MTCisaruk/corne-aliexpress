@@ -344,8 +344,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
 combos:
-- p: [8, 9]
-  k: $$mdi:keyboard-tab$$
 - p: [12, 11, 10]
   k: {t: GAME, h: toggle}
 - p: [3, 4]
